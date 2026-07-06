@@ -1,0 +1,4 @@
+vendor/
+
+# Arquivos de configuração local com senhas e chaves privadas
+.env
