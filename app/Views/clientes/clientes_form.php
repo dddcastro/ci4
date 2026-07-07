@@ -68,7 +68,8 @@
                             cliente_documento: cliente_documento,
                         },
                         success: function (response) {
-                            console.log(response);
+                            alert(response.msg);
+                            window.location.replace("/clientes");
                         },
                     });
                 }

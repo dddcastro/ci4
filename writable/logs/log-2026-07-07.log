@@ -1,0 +1,27 @@
+CRITICAL - 2026-07-07 04:17:00 --> ErrorException: Undefined array key "proposta_versao"
+[Method: PATCH, Route: api/v1/propostas/2]
+in APPPATH/Controllers/Propostas.php on line 71.
+ 1 APPPATH/Controllers/Propostas.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "proposta_versao"', '/var/www/html/app/Controllers/Propostas.php', 71)
+ 2 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\Propostas->save('2')
+ 3 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Propostas))
+ 4 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-07-07 04:25:00 --> Table 'ci4.propostaslogs' doesn't exist
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 300.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(300): mysqli->query('INSERT INTO `propostaslogs` (`proposta_id`, `actor`, `evento`, `payload`) VALUES (\'2\', 1, \'UPDATED_FIELDS\', \'{\\"valor_mensal\\":{\\"antigo\\":\\"232.44\\",\\"novo\\":\\"232.50\\"}}\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `propostaslogs` (`proposta_id`, `actor`, `evento`, `payload`) VALUES (\'2\', 1, \'UPDATED_FIELDS\', \'{\\"valor_mensal\\":{\\"antigo\\":\\"232.44\\",\\"novo\\":\\"232.50\\"}}\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `propostaslogs` (`proposta_id`, `actor`, `evento`, `payload`) VALUES (\'2\', 1, \'UPDATED_FIELDS\', \'{\\"valor_mensal\\":{\\"antigo\\":\\"232.44\\",\\"novo\\":\\"232.50\\"}}\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `propostaslogs` (`proposta_id`, `actor`, `evento`, `payload`) VALUES (:proposta_id:, :actor:, :evento:, :payload:)', [...], false)
+ 5 SYSTEMPATH/Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH/Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH/Controllers/Propostas.php(132): CodeIgniter\Model->insert([...])
+ 9 APPPATH/Controllers/Propostas.php(79): App\Controllers\Propostas->newLog([...], [...])
+10 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\Propostas->save('2')
+11 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Propostas))
+12 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

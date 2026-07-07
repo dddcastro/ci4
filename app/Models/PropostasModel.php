@@ -12,7 +12,7 @@ class PropostasModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = [];
+    protected $allowedFields    = ['cliente_id', 'produto', 'valor_mensal', 'status', 'origem', 'versao'];
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;

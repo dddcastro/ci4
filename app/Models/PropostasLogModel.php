@@ -6,13 +6,13 @@ use CodeIgniter\Model;
 
 class PropostasLogModel extends Model
 {
-    protected $table            = 'propostaslogs';
+    protected $table            = 'propostas_log';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = [];
+    protected $allowedFields    = ['proposta_id', 'actor', 'evento', 'payload'];
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;

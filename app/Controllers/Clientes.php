@@ -24,7 +24,18 @@ class Clientes extends BaseController
 
     public function list(){
         $clientesModel = new ClientesModel();
-        $clientes = $clientesModel->paginate(10);
+        if($this->request->getGet('selectform')){
+            $clientes = $clientesModel->findAll();
+
+            $data = [
+                'status' => 200,
+                'data' => $clientes,
+            ];
+
+            return json_encode($data);
+        }else
+            $clientes = $clientesModel->paginate(10);
+
         $pager = $clientesModel->pager;
         $data = [
             'status' => 200,
