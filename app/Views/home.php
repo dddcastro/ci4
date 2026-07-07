@@ -1,7 +1,8 @@
 <?= $this->extend("master.php")?>
 
 <?=$this->section('content')?>
-    <div class="container-fluid">
-        <h1>TESTE SECTION<h2>
+    <div class="container-xxl">
+        <h1>TESTE CODEIGNITER4<h2>
+        <hr/>
     </div>
 <?=$this->endSection()?> ?>
